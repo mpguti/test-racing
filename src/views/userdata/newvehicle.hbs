@@ -1,0 +1,36 @@
+<h1>Añadir vehiculo</h1>
+
+<form action="/user/newvehicle" method="post">
+<div>
+    <label for="alias">Alias</label>
+    <input type="text" name="alias" placeholder="Alias" id="alias" />
+    </div>
+    <div>
+    <label for="tipo">Tipo</label>
+    <select name="tipo" aria-placeholder="Selecciona uno">
+        <option value="Racing">Racing</option>
+        <option value="PitBike">Pit Bike</option>
+    </select>
+    </div>
+    <div>
+    <label for="marca">Marca</label>
+    <input type="text" name="marca" placeholder="Yamaha" id="factory"/>
+    </div>
+    <div>
+    <label for="modelo">Modelo</label>
+    <input type="text" name="modelo" placeholder="R1" id="model">
+    </div>
+    <div>
+    <label for="motor">Motor</label>
+    <input type="text" name="motor" placeholder="1000cv" id="engine">
+    </div> 
+    <div>
+    <label for="idowner" >OwnerId</label>
+    <input type="text" name="idowner"  id="owner" value="{{id}}" readonly>
+    </div> 
+    <button type="submit">Añadir</button>
+
+</form>
+<hr>
+
+<a href="/user/myvehicles" ><button>Volver a mis vehiculos</button></a>

@@ -1,0 +1,58 @@
+<table class="table container">
+   <thead>
+        <tr>
+        <th>N.</th>
+        <th>Vehiculo</th>
+        <th>Tipo</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Motor</th>
+        <th>Button</th>
+        </tr>
+   </thead> 
+   <tbody>
+    {{#each vehiculos}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{alias}}</td>
+                <td>{{tipo}}</td>
+                <td>{{marca}}</td>
+                <td>{{modelo}}</td>
+                <td>{{motor}}</td>
+                <td>
+                    <a href="/user/myvehicles/edit/{{_id}}" > <button type="submit">Editar</button>
+                    <a href="/user/myvehicles/delete/{{_id}}" > <button type="submit">Borrar</button>
+                </td>
+            </tr>
+    {{/each}}
+    <a href="/user/newvehicle" type="submit"><button>Nuevo vehiculo</button></a>
+   </tbody>
+</table>
+
+
+
+{{!-- <table class="table container">
+    <thead>
+        <tr>
+            <th>N.</th>
+            <th>Alias</th>
+            <th>Tipo</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Motor</th>
+            <th>Button</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each vehiculos}}
+            {{alias}}
+            {{tipo}}
+            {{marca}}
+            {{modelo}}
+            {{motor}}
+            <a href='/user/myvehicles/edit/{{_id}}'><button>Editar</button></a>
+            <a href='/user/myvehicles/delete/{{_id}}'><button>Borrar</button></a>
+        {{/each}}
+</tbody>
+</table>
+        <a href="/user/newvehicle"><button>Nuevo Vehiculo</button></a> --}}

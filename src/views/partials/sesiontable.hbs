@@ -1,0 +1,30 @@
+<table class="table container">
+   <thead>
+        <tr>
+        <th>N.</th>
+        <th>Vehiculo</th>
+        <th>Circuito</th>
+        <th>Fecha</th>
+        <th>Mejor Vuelta</th>
+        <th>Condición</th>
+        <th>Button</th>
+        </tr>
+   </thead> 
+   <tbody>
+    {{#each sessions}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{alias}}</td>
+                <td>{{circuito}}</td>
+                <td>{{fecha}}</td>
+                <td>{{mejorvuelta}}</td>
+                <td>{{condicion}}</td>
+                <td>
+                  <a href="/user/mysessions/edit/{{_id}}" > <button type="submit">Editar</button>
+                   <a href="/user/mysessions/delete/{{_id}}" > <button type="submit">Borrar</button>
+                    
+                </td>
+            </tr>
+    {{/each}}
+   </tbody>
+</table>

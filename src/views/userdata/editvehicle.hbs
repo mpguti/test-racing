@@ -1,0 +1,32 @@
+<h1>Modificar vehiculo</h1>
+
+<form action="/user/myvehicles/edit/{{editVehicle._id}}" method="post">
+<div>
+    <label for="alias">Alias vehiculo</label>
+    <input type="text" name="alias"  value="{{editVehicle.alias}}" id="alias" /> 
+    </div>
+    <div>
+    <label for="tipo">Tipo</label>
+    <select name="tipo" value="{{ editVehicle.tipo }}" aria-placeholder="Selecciona uno">
+        <option value="Racing">Racing</option>
+        <option value="PitBike">Pit Bike</option>
+    </select>
+    </div>
+    <div>
+    <label for="marca">Marca</label>
+    <input type="text" name="marca" value="{{ editVehicle.marca }}" placeholder="Marca" id="factory"/>
+    </div>
+    <div>
+    <label for="modelo">Modelo</label>
+    <input type="text" name="modelo" placeholder="Modelo" value="{{ editVehicle.modelo }}" id="model">
+    </div>
+    <div>
+    <label for="motor">Motor</label>
+    <input type="text" name="motor" value="{{ editVehicle.motor }}" placeholder="Motor" id="engine">
+    </div>  
+    <button type="submit">Modificar</button>
+</form>
+
+<hr>
+
+<a href="/user/myvehicles" ><button>Volver a mis vehiculos</button></a>

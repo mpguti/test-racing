@@ -1,0 +1,46 @@
+{{errors}}
+
+<h1>Nueva sesion</h1>
+
+<form class="container" action="/user/newsession" method="post">
+  <div>
+    <label for="alias">Vehiculo</label>
+    <select name="alias" placeholder="Selecciona uno..." id="alias">
+      {{#each vehicles}}
+        <option>{{alias}}</option>
+      {{/each }}
+    </select>
+  </div>
+  <div>
+    <label for="circuito">Circuito</label>
+    <input type="text" name="circuito" placeholder="circuito" id="circuit" />
+  </div>
+  <div>
+    <label for="fecha">Fecha</label>
+    <input type="date" name="fecha" placeholder="fecha" id="date" />
+  </div>
+  <div>
+    <label for="mejorvuelta">Mejor vuelta</label>
+    <input
+      type="text"
+      name="mejorvuelta"
+      pattern="^[0-2]:([0-5]\d).(\d+)"
+      placeholder="1:00.000"
+      id="bestlap"
+    />
+  </div>
+  <div>
+    <label for="condicion">Condicion</label>
+    <select name="condicion">
+      <option value="Seco" selected>Seco</option>
+      <option value="Semiseco">Semiseco</option>
+      <option value="Mojado">Mojado</option>
+    </select>
+  </div>
+  <div>
+    <label for="idowner">OwnerId</label>
+    <input type="text" name="idowner"  id="owner" value="{{id}}" readonly>
+    </div> 
+
+  <button type="submit">Añadir</button>
+</form>
